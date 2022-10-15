@@ -19,7 +19,7 @@
  (name tiger_king)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml dune)
+ (depends ocaml dune base stdio ppx_deriving ppx_sexp_conv)
  (tags
   (topics "to describe" your project)))
 

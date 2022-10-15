@@ -1,4 +1,6 @@
 (executable
  (public_name tiger_king)
  (name main)
- (libraries tiger_king))
+ (libraries tiger_king)
+ (preprocess
+  (pps ppx_sexp_conv ppx_deriving.ord)))

@@ -1,2 +1,5 @@
 (library
- (name tiger_king))
+ (name tiger_king)
+ (libraries base stdio)
+ (preprocess
+  (pps ppx_sexp_conv ppx_deriving.ord ppx_deriving.eq)))

@@ -1,6 +1,8 @@
-type label = string
+open Base
+
+type label = string [@@deriving sexp]
 type size
-type temp = unit
+type temp = string [@@deriving sexp]
 
 type stm =
   | SEQ of stm * stm
@@ -9,6 +11,7 @@ type stm =
   | CJUMP of relop * exp * exp * label * label
   | MOVE of exp * exp
   | EXP of exp
+[@@deriving sexp]
 
 and exp =
   | BINOP of binop * exp * exp
@@ -18,6 +21,7 @@ and exp =
   | NAME of label
   | CONST of int
   | CALL of exp * exp list
+[@@deriving sexp]
 
 and binop =
   | PLUS
@@ -32,5 +36,3 @@ and binop =
   | XOR
 
 and relop = EQ | NE | LT | GT | LE | GE | ULT | ULE | UGT | UGE
-
-let string_of_exp exp = ignore exp; "NYI"
