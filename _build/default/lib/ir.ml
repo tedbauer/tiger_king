@@ -1,0 +1,36 @@
+type label = string
+type size
+type temp = unit
+
+type stm =
+  | SEQ of stm * stm
+  | LABEL of label
+  | JUMP of exp * label list
+  | CJUMP of relop * exp * exp * label * label
+  | MOVE of exp * exp
+  | EXP of exp
+
+and exp =
+  | BINOP of binop * exp * exp
+  | MEM of exp
+  | TEMP of temp (* TODO: use real temp type *)
+  | ESEQ of stm * exp
+  | NAME of label
+  | CONST of int
+  | CALL of exp * exp list
+
+and binop =
+  | PLUS
+  | MINUS
+  | MUL
+  | DIV
+  | AND
+  | OR
+  | LSHIFT
+  | RSHIFT
+  | ARSHIFT
+  | XOR
+
+and relop = EQ | NE | LT | GT | LE | GE | ULT | ULE | UGT | UGE
+
+let string_of_exp exp = ignore exp; "NYI"

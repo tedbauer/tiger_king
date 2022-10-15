@@ -1,0 +1,1 @@
+let translate_exp (ast: Ast.exp) : Ir.exp = ignore ast; failwith "Not yet implemented"
