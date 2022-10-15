@@ -1,4 +1,0 @@
-(executable
- (public_name tiger_king)
- (name main)
- (libraries tiger_king))

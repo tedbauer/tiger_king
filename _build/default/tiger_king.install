@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/tiger_king/META"
-  "_build/install/default/lib/tiger_king/dune-package"
-  "_build/install/default/lib/tiger_king/opam"
-]
-bin: [
-  "_build/install/default/bin/tiger_king"
-]
